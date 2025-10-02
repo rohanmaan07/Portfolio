@@ -686,3 +686,88 @@ article {
     width: 100%;
   }
 }
+/* CONTACT FORM STYLES - UPDATED & MATCHED */
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Thoda kam gap */
+  max-width: 600px;
+  margin: 3rem auto; /* Upar neeche thoda aur margin */
+  padding: 2.5rem; /* Thoda aur padding */
+  background: #f9f9f9; /* Match with skill-category background */
+  border-radius: 2rem; /* Match with other containers */
+  border: 0.1rem solid rgb(163, 163, 163);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07); /* Match with project-card shadow */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 2rem; /* IMPORTANT: Matching border-radius */
+  border: 1px solid rgb(163, 163, 163);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 300ms ease; /* Add transition like other elements */
+}
+
+/* Add a focus style for better UX */
+.contact-form-container input[type="text"]:focus,
+.contact-form-container input[type="email"]:focus,
+.contact-form-container textarea:focus {
+  outline: none;
+  border-color: rgb(53, 53, 53);
+  box-shadow: 0 0 5px rgba(53, 53, 53, 0.3);
+}
+
+.contact-form-container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.service-title {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: rgb(85, 85, 85);
+  padding-left: 0.5rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 0.5rem; /* Align with title */
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(85, 85, 85);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Button already uses .btn and .btn-color-1, just need to ensure alignment */
+.contact-form-container .btn {
+  width: auto;
+  padding: 1rem 2.5rem;
+  align-self: center;
+  margin-top: 1rem; /* Add some space above the button */
+}
+
+/* RESPONSIVE ADJUSTMENT FOR FORM */
+@media screen and (max-width: 600px) {
+  .contact-form-container {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+}
